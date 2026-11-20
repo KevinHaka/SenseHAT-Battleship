@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Battleship</title>
+    
+    <style>
+        .button-container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+    
+        .button {
+          --main-color: #04AA6D;
+          border: 2px solid var(--main-color);
+          background-color: white;
+          color: black;
+          padding: 16px 32px;
+          text-align: center;
+          font-size: 16px;
+          margin: 5px;
+          text-decoration: none;
+          transition-duration: 0.5s;
+          cursor: pointer;
+        }
+
+        .button:hover {
+          background-color: var(--main-color);
+          color: white;
+        }
+    </style>
+  </head>
+  <body>
+     <p>Hello {{g.user[1]}}</p>
+     <p>
+       Enter a position on the LED array<br>
+       (if you enter a value greater than 7 on the<br> 
+       horizontal axis, the battleship game will restart):
+     </p>
+     
+     <form method="POST">
+       <input type="number" name="horizontal" placeholder="Horizontal">X
+       <input type="number" name="vertical" placeholder="Vertical"><br>
+       <button type="submit">SEND to Sense HAT</button>
+     </form>
+     
+     <hr>
+     
+     <div class="button-container">
+         <a class="button" style="--main-color: #ef12ff;" href="{{ url_for('ships') }}">Refresh</a>
+         <a class="button" style="--main-color: #e1f719;" href="{{ url_for('homepage') }}">Homepage</a>
+     </div>
+  </body>
+</html>

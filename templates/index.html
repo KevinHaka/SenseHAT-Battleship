@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    
+    <style>
+        .button-container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+    
+        .button {
+          --main-color: #04AA6D;
+          border: 2px solid var(--main-color);
+          background-color: white;
+          color: black;
+          padding: 16px 32px;
+          text-align: center;
+          font-size: 16px;
+          margin: 5px;
+          text-decoration: none;
+          transition-duration: 0.5s;
+          cursor: pointer;
+        }
+
+        .button:hover {
+          background-color: var(--main-color);
+          color: white;
+        }
+    </style>
+  </head>
+  <body>
+     <p>Hello {{g.user[1]}}</p>
+     
+     <div class="button-container">
+         <a class="button" style="--main-color: #04AA6D;" href="{{ url_for('sense_data') }}">Sensor Data</a>
+         <a class="button" style="--main-color: #008CBA;" href="{{ url_for('ships') }}">Battleship</a>
+         <a class="button" style="--main-color: #090914;" href="{{ url_for('bonus_ships') }}">Bonus</a>
+         <a class="button" style="--main-color: #e83a43;" href="{{ url_for('logme') }}">LOG OUT</a>
+     </div>
+  </body>
+</html>
