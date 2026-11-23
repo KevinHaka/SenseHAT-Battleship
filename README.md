@@ -2,6 +2,8 @@
 
 A Flask web app for the Raspberry Pi Sense HAT. It includes a Battleship-style game played on the Sense HAT’s 8×8 LED matrix, plus a page for viewing sensor readings.
 
+This project was developed as the final project for the *Internet of Things (IoT) in Action: with Raspberry Pi and Python* course offered by Mathesis.
+
 ## Features
 
 - Battleship and bonus game modes
